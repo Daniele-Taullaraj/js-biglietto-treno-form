@@ -38,9 +38,19 @@ myButton.addEventListener("click", function () {
         console.log('Il costo del biglietto è : ' + totale + '€');
     }
 
-    const form = document.querySelector('form');
-    // Resettare il modulo per ripulire i campi di input
+    let passeggero = document.getElementById('nome').value;
+    let nomePasseggero = document.getElementById('nomePasseggero');
+    nomePasseggero.innerHTML += passeggero;
+
+    let costo = document.getElementById('costo');
+    costo.innerText += totale;
+
+    const form = document.querySelector('form'); 32
+    // // // Resettare il modulo per ripulire i campi di input
     form.reset();
+
+
+
 
 });
 

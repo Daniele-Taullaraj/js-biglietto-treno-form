@@ -5,17 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto treno form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
-    <form>
-        <label for="chilometri">km</label>
-        <input type="number" id="chilometri" name="chilometri" placeholder="Inserisci chilometri">
-        <label for="chilometri">età</label>
-        <input type="number" id="età" name="età" placeholder="Inserisci età">
-        <button id="submit">Genera</button>
-        <script src="./myscripts.js"></script>
-    </form>
+<body class="bg-danger container">
+    <h1 class="text-center text-light my-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+
+    <div class="row">
+        <div class="col-10 m-auto border border-5 border-dark rounded-pill bg-light p-5">
+
+            <form class="d-flex flex-column align-items-center">
+
+                <div class="w-100 d-flex justify-content-around">
+                    <div>
+                        <label for="nome" class="w-100 text-center mb-3 text-danger fw-bold">Nome e Cognome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Inserisci nome"
+                            class="form-control border-3 border-danger mb-5">
+                    </div>
+                    <div>
+                        <label for="chilometri" class="w-100 text-center mb-3 text-danger fw-bold">km</label>
+                        <input type="number" id="chilometri" name="chilometri" placeholder="Inserisci chilometri"
+                            class="form-control border-3 border-danger mb-5">
+                    </div>
+                    <div>
+                        <label for="chilometri" class="w-100 text-center mb-3 text-danger fw-bold">età</label>
+                        <input type="number" id="età" name="età" placeholder="Inserisci età"
+                            class="form-control border-3 border-danger mb-5">
+                    </div>
+                </div>
+
+
+                <div>
+                    <button id="submit" class="btn btn-outline-danger">Genera</button>
+                    <button id="annulla" class="btn btn-outline-danger">Annulla</button>
+                </div>
+
+            </form>
+        </div>
+
+        <h1 class="text-center text-light mt-3">IL TUO BIGLIETTO</h1>
+
+        <div class="col-10 m-auto border border-5 border-dark rounded-pill bg-light">
+            <div class="row m-5 " style="height: 8rem">
+                <h5 class="fw-bold">DETTAGLIO PASSEGGERO</h5>
+                <div class="col-3 bg-success p-3">
+                    <h5 class="fw-bold" id="nomePasseggero">Nome Passeggero </h5>
+                </div>
+                <div class="col-9 p-0">
+
+                    <table class="w-100 h-100 border border-3">
+                        <thead>
+                            <tr>
+                                <th>Offerta</th>
+                                <th>Carrozza</th>
+                                <th>Codice CP</th>
+                                <th>Costo biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Biglietto Standard</td>
+                                <td>5</td>
+                                <td>92911</td>
+                                <td id="costo"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <script src="./myscripts.js"></script>
+
 </body>
 
 </html>
